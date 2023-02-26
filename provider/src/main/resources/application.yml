@@ -1,0 +1,16 @@
+server:
+  port: 56010
+
+spring:
+  application:
+    name: provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: a219ed14-16cc-4163-94e0-f6f751f8a0f5
+
+logging:
+  level:
+    root: info
+    org.springframework: info

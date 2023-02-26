@@ -1,0 +1,21 @@
+server:
+  port: 56020 #启动端口 命令行注入
+
+
+spring:
+  application:
+    name: consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: a219ed14-16cc-4163-94e0-f6f751f8a0f5
+#        cluster-name: DEFAULT
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:9000
+
+
+feign:
+  sentinel:
+    enabled: true

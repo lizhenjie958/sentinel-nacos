@@ -1,0 +1,21 @@
+server:
+  port: 56030 #启动端口 命令行注入
+  servlet:
+    context-path: /application1
+
+spring:
+  application:
+    name: application1
+  main:
+    allow-bean-definition-overriding: true # Spring Boot 2.1 需要设定
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: d5738164-bfdf-492b-90dd-5510b688631b
+        cluster-name: DEFAULT
+      config:
+        server-addr: 127.0.0.1:8848 # 配置中心地址
+        file-extension: yaml
+        namespace: d5738164-bfdf-492b-90dd-5510b688631b # 开发环境
+        group: NACOS_MICROSERVICE_GROUP # xx业务组
